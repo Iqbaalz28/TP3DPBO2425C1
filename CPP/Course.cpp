@@ -18,6 +18,7 @@ public:
         this->dosenPengampu = dosenPengampu;
     }
 
+    // Getter & Setter
     string getKode() { return kode; }
     string getNama() { return nama; }
     int getSks() { return sks; }
