@@ -1,6 +1,4 @@
-// TeachingAssistant.java
-// TeachingAssistant mewarisi Student (multilevel inheritance)
-
+// TeachingAssistant mewarisi Student (Multilevel Inheritance)
 public class TeachingAssistant extends Student {
     private int jamAsistensi;
     private String mataKuliah;
@@ -19,11 +17,9 @@ public class TeachingAssistant extends Student {
         this.mataKuliah = mataKuliah;
     }
 
-    // Getter
+    // Getter & Setter
     public int getJamAsistensi() { return jamAsistensi; }
+    public void setJamAsistensi(int jamAsistensi) { this.jamAsistensi = jamAsistensi; }
     public String getMataKuliah() { return mataKuliah; }
-
-    // Setter
-    public void setJamAsistensi(int jam) { this.jamAsistensi = jam; }
-    public void setMataKuliah(String mk) { this.mataKuliah = mk; }
+    public void setMataKuliah(String mataKuliah) { this.mataKuliah = mataKuliah; }
 }

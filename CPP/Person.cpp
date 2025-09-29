@@ -1,24 +1,26 @@
 #pragma once
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
-// Kelas dasar Person -> akan diwariskan ke Student, Lecturer, Staff
+// Base class Person
 class Person {
-private:
+protected:
     string id;
     string nama;
     int usia;
 
 public:
-    Person() : id(""), nama(""), usia(0) {}
-    Person(string id, string nama, int usia) : id(id), nama(nama), usia(usia) {}
+    Person() {}
+    Person(string id, string nama, int usia) {
+        this->id = id;
+        this->nama = nama;
+        this->usia = usia;
+    }
 
-    // Getter
-    string getId() const { return id; }
-    string getNama() const { return nama; }
-    int getUsia() const { return usia; }
-
-    // Setter
+    // Getter & Setter
+    string getId() { return id; }
+    string getNama() { return nama; }
+    int getUsia() { return usia; }
     void setId(string id) { this->id = id; }
     void setNama(string nama) { this->nama = nama; }
     void setUsia(int usia) { this->usia = usia; }

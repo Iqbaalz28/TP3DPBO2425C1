@@ -1,21 +1,20 @@
 # lecturer.py
-# Lecturer mewarisi Person (hierarchical inheritance)
+# Lecturer mewarisi Person
 
 from person import Person
 
 class Lecturer(Person):
     def __init__(self, id="", nama="", usia=0, nidn="", departemen="", jabatan=""):
         super().__init__(id, nama, usia)
-        self.__nidn = nidn
-        self.__departemen = departemen
-        self.__jabatan = jabatan
+        self.nidn = nidn
+        self.departemen = departemen
+        self.jabatan = jabatan
 
-    # Getter
-    def get_nidn(self): return self.__nidn
-    def get_departemen(self): return self.__departemen
-    def get_jabatan(self): return self.__jabatan
+    def get_nidn(self): return self.nidn
+    def set_nidn(self, nidn): self.nidn = nidn
 
-    # Setter
-    def set_nidn(self, nidn): self.__nidn = nidn
-    def set_departemen(self, departemen): self.__departemen = departemen
-    def set_jabatan(self, jabatan): self.__jabatan = jabatan
+    def get_departemen(self): return self.departemen
+    def set_departemen(self, departemen): self.departemen = departemen
+
+    def get_jabatan(self): return self.jabatan
+    def set_jabatan(self, jabatan): self.jabatan = jabatan

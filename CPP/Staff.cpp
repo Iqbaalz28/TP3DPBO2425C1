@@ -1,24 +1,21 @@
 #pragma once
 #include "Person.cpp"
 
-// Staff juga turunan Person (hierarchical inheritance)
+// Staff inherits Person
 class Staff : public Person {
 private:
-    string posisi;
+    string posisi, shift;
     double gaji;
-    string shift;
 
 public:
-    Staff() : Person(), posisi(""), gaji(0.0), shift("") {}
+    Staff() {}
     Staff(string id, string nama, int usia, string posisi, double gaji, string shift)
         : Person(id, nama, usia), posisi(posisi), gaji(gaji), shift(shift) {}
 
-    // Getter
-    string getPosisi() const { return posisi; }
-    double getGaji() const { return gaji; }
-    string getShift() const { return shift; }
+    string getPosisi() { return posisi; }
+    double getGaji() { return gaji; }
+    string getShift() { return shift; }
 
-    // Setter
     void setPosisi(string posisi) { this->posisi = posisi; }
     void setGaji(double gaji) { this->gaji = gaji; }
     void setShift(string shift) { this->shift = shift; }

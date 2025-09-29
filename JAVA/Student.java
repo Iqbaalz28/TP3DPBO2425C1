@@ -1,6 +1,4 @@
-// Student.java
-// Student mewarisi Person (hierarchical inheritance)
-
+// Student mewarisi Person (Hierarchical Inheritance)
 public class Student extends Person {
     private String nim;
     private String jurusan;
@@ -20,13 +18,13 @@ public class Student extends Person {
         this.gpa = gpa;
     }
 
-    // Getter
+    // Getter & Setter
     public String getNim() { return nim; }
-    public String getJurusan() { return jurusan; }
-    public double getGpa() { return gpa; }
-
-    // Setter
     public void setNim(String nim) { this.nim = nim; }
+
+    public String getJurusan() { return jurusan; }
     public void setJurusan(String jurusan) { this.jurusan = jurusan; }
+
+    public double getGpa() { return gpa; }
     public void setGpa(double gpa) { this.gpa = gpa; }
 }

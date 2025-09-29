@@ -1,6 +1,4 @@
-// Lecturer.java
-// Lecturer mewarisi Person (hierarchical inheritance)
-
+// Lecturer mewarisi Person (Hierarchical Inheritance)
 public class Lecturer extends Person {
     private String nidn;
     private String departemen;
@@ -20,13 +18,13 @@ public class Lecturer extends Person {
         this.jabatan = jabatan;
     }
 
-    // Getter
+    // Getter & Setter
     public String getNidn() { return nidn; }
-    public String getDepartemen() { return departemen; }
-    public String getJabatan() { return jabatan; }
-
-    // Setter
     public void setNidn(String nidn) { this.nidn = nidn; }
+
+    public String getDepartemen() { return departemen; }
     public void setDepartemen(String departemen) { this.departemen = departemen; }
+
+    public String getJabatan() { return jabatan; }
     public void setJabatan(String jabatan) { this.jabatan = jabatan; }
 }

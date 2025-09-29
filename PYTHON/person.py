@@ -1,18 +1,18 @@
 # person.py
-# Kelas dasar Person -> akan diwariskan ke Student, Lecturer, Staff
+# Kelas dasar Person yang akan diwarisi oleh Student, Lecturer, Staff, TeachingAssistant
 
 class Person:
     def __init__(self, id="", nama="", usia=0):
-        self.__id = id
-        self.__nama = nama
-        self.__usia = usia
+        self.id = id
+        self.nama = nama
+        self.usia = usia
 
-    # Getter
-    def get_id(self): return self.__id
-    def get_nama(self): return self.__nama
-    def get_usia(self): return self.__usia
+    # Getter dan Setter
+    def get_id(self): return self.id
+    def set_id(self, id): self.id = id
 
-    # Setter
-    def set_id(self, id): self.__id = id
-    def set_nama(self, nama): self.__nama = nama
-    def set_usia(self, usia): self.__usia = usia
+    def get_nama(self): return self.nama
+    def set_nama(self, nama): self.nama = nama
+
+    def get_usia(self): return self.usia
+    def set_usia(self, usia): self.usia = usia

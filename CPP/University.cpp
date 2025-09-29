@@ -4,14 +4,20 @@
 #include "Lecturer.cpp"
 #include "Staff.cpp"
 #include "TeachingAssistant.cpp"
+#include "Course.cpp"
 using namespace std;
 
 class University {
 private:
+    string nama;
+    string alamat;
+    string akreditasi;
+
     vector<Student> students;
     vector<Lecturer> lecturers;
     vector<Staff> staffs;
     vector<TeachingAssistant> tas;
+    vector<Course> courses;
 
     // helper untuk format angka double
     string formatDouble(double val, int prec=2) {
@@ -30,12 +36,27 @@ private:
     }
 
 public:
-    University(){}
+    // Konstruktor
+    University(string nama="", string alamat="", string akreditasi="") {
+        this->nama = nama;
+        this->alamat = alamat;
+        this->akreditasi = akreditasi;
+    }
 
+    // Fungsi tambahan untuk menampilkan informasi universitas
+    void printInfo() {
+        cout << "\n=== INFORMASI UNIVERSITAS ===\n";
+        cout << "Nama        : " << nama << endl;
+        cout << "Alamat      : " << alamat << endl;
+        cout << "Akreditasi  : " << akreditasi << endl;
+    }
+
+    // Method add data
     void addStudent(const Student& s) { students.push_back(s); }
     void addLecturer(const Lecturer& l) { lecturers.push_back(l); }
     void addStaff(const Staff& st) { staffs.push_back(st); }
     void addTA(const TeachingAssistant& t) { tas.push_back(t); }
+    void addCourse(const Course& c) { courses.push_back(c); }
 
     // ================= STUDENTS =================
     void printStudents() {
@@ -181,6 +202,38 @@ public:
             string jam = to_string(t.getJamAsistensi());
             cout << "| " << jam << string(width[6]-jam.length()+1,' ');
             cout << "| " << t.getMataKuliah() << string(width[7]-t.getMataKuliah().length()+1,' ') << "|\n";
+        }
+        printLine(width);
+    }
+
+    // ================= COURSES =================
+    void printCourses() {
+        cout << "\n=== DATA COURSE ===\n";
+        vector<string> header = {"Kode","Nama","SKS","DosenPengampu"};
+        vector<int> width(header.size(),0);
+
+        for (int i=0;i<header.size();i++) width[i]=header[i].length();
+
+        for (auto &c: courses) {
+            width[0] = max(width[0], (int)c.getKode().length());
+            width[1] = max(width[1], (int)c.getNama().length());
+            width[2] = max(width[2], (int)to_string(c.getSks()).length());
+            width[3] = max(width[3], (int)c.getDosenPengampu().length());
+        }
+
+        printLine(width);
+        cout << "|";
+        for (int i=0;i<header.size();i++)
+            cout << " " << header[i] << string(width[i]-header[i].length()+1,' ') << "|";
+        cout << "\n";
+        printLine(width);
+
+        for (auto &c: courses) {
+            cout << "| " << c.getKode() << string(width[0]-c.getKode().length()+1,' ');
+            cout << "| " << c.getNama() << string(width[1]-c.getNama().length()+1,' ');
+            string sks = to_string(c.getSks());
+            cout << "| " << sks << string(width[2]-sks.length()+1,' ');
+            cout << "| " << c.getDosenPengampu() << string(width[3]-c.getDosenPengampu().length()+1,' ') << "|\n";
         }
         printLine(width);
     }
