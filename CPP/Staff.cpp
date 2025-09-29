@@ -13,10 +13,12 @@ public:
     Staff(string id, string nama, int usia, string posisi, double gaji, string shift)
         : Person(id, nama, usia), posisi(posisi), gaji(gaji), shift(shift) {}
 
+    // Getter
     string getPosisi() const { return posisi; }
     double getGaji() const { return gaji; }
     string getShift() const { return shift; }
 
+    // Setter
     void setPosisi(string posisi) { this->posisi = posisi; }
     void setGaji(double gaji) { this->gaji = gaji; }
     void setShift(string shift) { this->shift = shift; }

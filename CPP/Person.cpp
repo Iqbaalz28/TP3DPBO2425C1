@@ -13,10 +13,12 @@ public:
     Person() : id(""), nama(""), usia(0) {}
     Person(string id, string nama, int usia) : id(id), nama(nama), usia(usia) {}
 
+    // Getter
     string getId() const { return id; }
     string getNama() const { return nama; }
     int getUsia() const { return usia; }
 
+    // Setter
     void setId(string id) { this->id = id; }
     void setNama(string nama) { this->nama = nama; }
     void setUsia(int usia) { this->usia = usia; }
