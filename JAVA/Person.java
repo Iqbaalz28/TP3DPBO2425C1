@@ -1,5 +1,5 @@
 // Person.java
-// Kelas dasar Person -> diwariskan ke Student, Lecturer, Staff
+// Kelas dasar Person -> akan diwariskan ke Student, Lecturer, Staff
 
 public class Person {
     private String id;

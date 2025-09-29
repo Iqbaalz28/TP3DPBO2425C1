@@ -20,10 +20,12 @@ public class Student extends Person {
         this.gpa = gpa;
     }
 
+    // Getter
     public String getNim() { return nim; }
     public String getJurusan() { return jurusan; }
     public double getGpa() { return gpa; }
 
+    // Setter
     public void setNim(String nim) { this.nim = nim; }
     public void setJurusan(String jurusan) { this.jurusan = jurusan; }
     public void setGpa(double gpa) { this.gpa = gpa; }

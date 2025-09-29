@@ -1,7 +1,8 @@
 # lecturer.py
+# Lecturer mewarisi Person (hierarchical inheritance)
+
 from person import Person
 
-# Lecturer mewarisi Person (hierarchical inheritance)
 class Lecturer(Person):
     def __init__(self, id="", nama="", usia=0, nidn="", departemen="", jabatan=""):
         super().__init__(id, nama, usia)

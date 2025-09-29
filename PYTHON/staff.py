@@ -1,7 +1,8 @@
 # staff.py
+# Staff mewarisi Person (hierarchical inheritance)
+
 from person import Person
 
-# Staff juga turunan Person (hierarchical inheritance)
 class Staff(Person):
     def __init__(self, id="", nama="", usia=0, posisi="", gaji=0.0, shift=""):
         super().__init__(id, nama, usia)

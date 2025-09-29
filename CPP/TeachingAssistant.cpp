@@ -1,21 +1,24 @@
 #pragma once
 #include "Student.cpp"
-#include "Lecturer.cpp"
 
-// TeachingAssistant mewarisi Student & Lecturer -> Multiple Inheritance
-class TeachingAssistant : public Student, public Lecturer {
+// TeachingAssistant mewarisi Student (Multilevel Inheritance)
+class TeachingAssistant : public Student {
 private:
     int jamAsistensi;
+    string mataKuliah; // atribut baru
 
 public:
-    TeachingAssistant() : Student(), Lecturer(), jamAsistensi(0) {}
-    TeachingAssistant(string id, string nama, int usia, string nim, string jurusan, double gpa,
-                      string nidn, string departemen, string jabatan, int jamAsistensi)
-        : Person(id, nama, usia),
-          Student(id, nama, usia, nim, jurusan, gpa),
-          Lecturer(id, nama, usia, nidn, departemen, jabatan),
-          jamAsistensi(jamAsistensi) {}
+    TeachingAssistant() : Student(), jamAsistensi(0), mataKuliah("") {}
+
+    TeachingAssistant(string id, string nama, int usia, 
+                      string nim, string jurusan, double gpa,
+                      int jamAsistensi, string mataKuliah)
+        : Student(id, nama, usia, nim, jurusan, gpa),
+          jamAsistensi(jamAsistensi), mataKuliah(mataKuliah) {}
 
     int getJamAsistensi() const { return jamAsistensi; }
     void setJamAsistensi(int jam) { jamAsistensi = jam; }
+
+    string getMataKuliah() const { return mataKuliah; }
+    void setMataKuliah(string mk) { mataKuliah = mk; }
 };

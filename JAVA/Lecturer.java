@@ -20,10 +20,12 @@ public class Lecturer extends Person {
         this.jabatan = jabatan;
     }
 
+    // Getter
     public String getNidn() { return nidn; }
     public String getDepartemen() { return departemen; }
     public String getJabatan() { return jabatan; }
 
+    // Setter
     public void setNidn(String nidn) { this.nidn = nidn; }
     public void setDepartemen(String departemen) { this.departemen = departemen; }
     public void setJabatan(String jabatan) { this.jabatan = jabatan; }

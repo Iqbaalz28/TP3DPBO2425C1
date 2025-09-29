@@ -1,5 +1,5 @@
 # person.py
-# Kelas dasar Person -> diwariskan ke Student, Lecturer, Staff
+# Kelas dasar Person -> akan diwariskan ke Student, Lecturer, Staff
 
 class Person:
     def __init__(self, id="", nama="", usia=0):

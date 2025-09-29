@@ -2,7 +2,7 @@
 #include "Person.cpp"
 
 // Lecturer mewarisi Person (hierarchical inheritance)
-class Lecturer : virtual public Person {
+class Lecturer : public Person {
 private:
     string nidn;
     string departemen;

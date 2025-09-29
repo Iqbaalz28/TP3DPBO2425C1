@@ -147,7 +147,7 @@ public:
     // ================= TEACHING ASSISTANT =================
     void printTAs() {
         cout << "\n=== DATA TEACHING ASSISTANT ===\n";
-        vector<string> header = {"ID","Nama","Usia","NIM","Jurusan","GPA","NIDN","Departemen","Jabatan","JamAsistensi"};
+        vector<string> header = {"ID","Nama","Usia","NIM","Jurusan","GPA","JamAsistensi","MataKuliah"};
         vector<int> width(header.size(),0);
 
         for (int i=0;i<header.size();i++) width[i]=header[i].length();
@@ -159,10 +159,8 @@ public:
             width[3] = max(width[3], (int)t.getNim().length());
             width[4] = max(width[4], (int)t.getJurusan().length());
             width[5] = max(width[5], (int)formatDouble(t.getGpa()).length());
-            width[6] = max(width[6], (int)t.getNidn().length());
-            width[7] = max(width[7], (int)t.getDepartemen().length());
-            width[8] = max(width[8], (int)t.getJabatan().length());
-            width[9] = max(width[9], (int)to_string(t.getJamAsistensi()).length());
+            width[6] = max(width[6], (int)to_string(t.getJamAsistensi()).length());
+            width[7] = max(width[7], (int)t.getMataKuliah().length());
         }
 
         printLine(width);
@@ -180,11 +178,9 @@ public:
             cout << "| " << t.getJurusan() << string(width[4]-t.getJurusan().length()+1,' ');
             string gpa = formatDouble(t.getGpa());
             cout << "| " << gpa << string(width[5]-gpa.length()+1,' ');
-            cout << "| " << t.getNidn() << string(width[6]-t.getNidn().length()+1,' ');
-            cout << "| " << t.getDepartemen() << string(width[7]-t.getDepartemen().length()+1,' ');
-            cout << "| " << t.getJabatan() << string(width[8]-t.getJabatan().length()+1,' ');
             string jam = to_string(t.getJamAsistensi());
-            cout << "| " << jam << string(width[9]-jam.length()+1,' ') << "|\n";
+            cout << "| " << jam << string(width[6]-jam.length()+1,' ');
+            cout << "| " << t.getMataKuliah() << string(width[7]-t.getMataKuliah().length()+1,' ') << "|\n";
         }
         printLine(width);
     }

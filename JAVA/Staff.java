@@ -1,5 +1,5 @@
 // Staff.java
-// Staff juga turunan Person (hierarchical inheritance)
+// Staff mewarisi Person (hierarchical inheritance)
 
 public class Staff extends Person {
     private String posisi;
@@ -20,10 +20,12 @@ public class Staff extends Person {
         this.shift = shift;
     }
 
+    // Getter
     public String getPosisi() { return posisi; }
     public double getGaji() { return gaji; }
     public String getShift() { return shift; }
 
+    // Setter
     public void setPosisi(String posisi) { this.posisi = posisi; }
     public void setGaji(double gaji) { this.gaji = gaji; }
     public void setShift(String shift) { this.shift = shift; }

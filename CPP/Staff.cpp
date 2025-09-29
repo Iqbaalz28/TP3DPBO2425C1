@@ -2,7 +2,7 @@
 #include "Person.cpp"
 
 // Staff juga turunan Person (hierarchical inheritance)
-class Staff : virtual public Person {
+class Staff : public Person {
 private:
     string posisi;
     double gaji;
