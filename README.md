@@ -1,10 +1,10 @@
-﻿# TP3DPBO2425C1
+# TP3DPBO2425C1
 
 ## Janji
 Saya Iqbal Rizky Maulana dengan NIM 2408622 mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ## 📖 Deskripsi
-Program ini merupakan implementasi konsep **Object-Oriented Programming (OOP)** dalam bahasa C++, Python, dan Java dengan studi kasus **Universitas**. Desain program menggunakan **hierachical & multilevel inheritance**, **composition**, serta **array of object**, dan dapat menambahkan data secara **dinamis**.
+Program ini merupakan implementasi konsep **Object-Oriented Programming (OOP)** dalam bahasa C++, Python, dan Java dengan studi kasus **Universitas**. Desain program menggunakan **hierarchical & multilevel inheritance**, **composition**, serta **array of object**, dan dapat menambahkan data secara **dinamis**.
 
 ## 🏫 Diagram UML
 <img width="554" height="441" alt="Diagram Universitas TP3" src="https://github.com/user-attachments/assets/7c9861a3-52bb-4103-9e4b-5451b663446d" />
